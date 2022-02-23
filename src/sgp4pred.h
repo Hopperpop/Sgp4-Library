@@ -59,8 +59,6 @@ struct passinfo
 class Sgp4 {
     char opsmode;
     gravconsttype  whichconst;
-    double ro[3];
-    double vo[3];
     double razel[3];
     double offset; //Min elevation for overpass prediction in radials
     double sunoffset;  //Min elevation sun for daylight in radials
@@ -71,6 +69,8 @@ class Sgp4 {
 	double visiblewrap(double jdCe);  //returns angle between sun surface and earth surface
 
   public:
+    double ro[3];
+    double vo[3];
     char satName[25];   ///satellite name
 	char line1[80];     //tle line 1
 	char line2[80];     //tle line 2
